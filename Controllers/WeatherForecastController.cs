@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace ActividadApiPlanetas.Controllers
+namespace PlanetasApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]

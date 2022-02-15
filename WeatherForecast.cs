@@ -1,4 +1,4 @@
-namespace ActividadApiPlanetas
+namespace PlanetasApi
 {
     public class WeatherForecast
     {

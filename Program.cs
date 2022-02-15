@@ -1,23 +1,19 @@
 using Microsoft.EntityFrameworkCore;
-using ActividadApiPlanetas.Models;
+using PlanetasApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<PlanetaContext>(options =>
-       options.UseSqlServer(builder.Configuration.GetConnectionString("PlanetaContextConnection")));
-//builder.Services.AddSwaggerGen(c =>
-//{
-//    c.SwaggerDoc("v1", new() { Title = "TodoApi", Version = "v1" });
-//});
+builder.Services.AddDbContext<PlanetContext>(opt =>
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("PlanetContext")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-   // app.UseSwagger();
+    //app.UseSwagger();
     //app.UseSwaggerUI();
 }
 
